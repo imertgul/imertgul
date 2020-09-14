@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My home Page',
+      title: 'İbrahim Mert Gül',
       debugShowCheckedModeBanner: true,
       theme: ThemeData(
         primarySwatch: Colors.blue,
