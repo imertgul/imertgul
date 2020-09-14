@@ -1,3 +1,5 @@
+import 'dart:html';
+import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:mertgul/utilities/constant.dart';
 import '../widgets/repositories.dart';
@@ -27,6 +29,15 @@ class _HomePageState extends State<HomePage> {
                 _buildProfile(),
                 _buildExperience(),
                 _buildRepo(),
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 20.0),
+                    child: Text(
+                      "Made with Flutter by İbrahim Mert Gül",
+                      style: styleLight,
+                    ),
+                  ),
+                )
               ],
             ),
           ),
@@ -60,18 +71,60 @@ Widget _buildProfile() {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  "Profile",
+                  "İbrahim Mert Gül",
                   style: styleBaslik,
                 ),
-                Text(
-                  "detailed",
-                  style: styleLight,
-                )
+                GestureDetector(
+                  onTap: () =>
+                      window.open("https://github.com/imertgul", 'Link'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      AntDesign.github,
+                      color: Renkler.dark,
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () => window.open(
+                      "https://tr.linkedin.com/in/imertgul", 'Link'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      AntDesign.linkedin_square,
+                      color: Renkler.dark,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      "Computer Engineer, Flutter Developer",
+                      style: styleLight,
+                    ),
+                  ),
+                ),
               ],
             ),
             Divider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Renkler.red),
+                  // child: Image(
+                  //   image: AssetImage("images/profile.jpg"),
+                  // ),
+                )
+              ],
+            )
           ],
         ),
       ),
@@ -103,15 +156,21 @@ Widget _buildExperience() {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  "Experience",
+                  "Experiences",
                   style: styleBaslik,
                 ),
-                Text(
-                  "detailed",
-                  style: styleLight,
-                )
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      "Detailed information about my experiences",
+                      style: styleLight,
+                    ),
+                  ),
+                ),
               ],
             ),
             Divider(),
