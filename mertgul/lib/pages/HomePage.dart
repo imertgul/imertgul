@@ -11,8 +11,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double screenWidth = 0;
+  double unit = 0;
+  static const double horizontalPadding = 20;
+
   @override
   Widget build(BuildContext context) {
+    screenWidth = MediaQuery.of(context).size.width;
+    unit = screenWidth / 100;
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -48,7 +54,7 @@ class _HomePageState extends State<HomePage> {
 
 Widget _buildProfile() {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 25),
+    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
     child: Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -67,10 +73,11 @@ Widget _buildProfile() {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "İbrahim Mert Gül",
@@ -83,7 +90,7 @@ Widget _buildProfile() {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       AntDesign.github,
-                      color: Renkler.dark,
+                      color: Renkler.darkL,
                     ),
                   ),
                 ),
@@ -94,18 +101,15 @@ Widget _buildProfile() {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       AntDesign.linkedin_square,
-                      color: Renkler.dark,
+                      color: Renkler.darkL,
                     ),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    "Computer Engineer, Flutter Developer",
-                    style: styleLight,
-                  ),
-                ),
               ],
+            ),
+            Text(
+              "Computer Engineer, Flutter Developer",
+              style: styleLight,
             ),
             Divider(),
             Row(
@@ -131,7 +135,7 @@ Widget _buildProfile() {
 
 Widget _buildExperience() {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 25),
+    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
     child: Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -150,20 +154,15 @@ Widget _buildExperience() {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  "Experiences",
-                  style: styleBaslik,
-                ),
-                Text(
-                  "Detailed information about my experiences",
-                  style: styleLight,
-                ),
-              ],
+            Text(
+              "Experiences",
+              style: styleBaslik,
+            ),
+            Text(
+              "Detailed information about my experiences",
+              style: styleLight,
             ),
             Divider(),
           ],
@@ -175,7 +174,7 @@ Widget _buildExperience() {
 
 Widget _buildRepo() {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 25),
+    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
     child: Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -194,20 +193,15 @@ Widget _buildRepo() {
         padding: const EdgeInsets.all(15.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  "Repositories",
-                  style: styleBaslik,
-                ),
-                Text(
-                  "Detailed information about open source projects",
-                  style: styleLight,
-                ),
-              ],
+            Text(
+              "Repositories",
+              style: styleBaslik,
+            ),
+            Text(
+              "Detailed information about open source projects",
+              style: styleLight,
             ),
             Divider(),
             Container(height: 500, child: buildRepos())
