@@ -21,8 +21,11 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Row(
-            children: <Widget>[],
+          Padding(
+            padding: const EdgeInsets.all(200.0),
+            child: Center(
+              child: buildRepos(),
+            ),
           )
         ],
       ),
