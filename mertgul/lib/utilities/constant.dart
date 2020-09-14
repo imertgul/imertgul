@@ -24,3 +24,14 @@ class Renkler {
 
 TextStyle yaziStili =
     new TextStyle(fontWeight: FontWeight.bold, color: Renkler.dark);
+
+TextStyle styleBaslik = new TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 30,
+  color: Renkler.dark,
+);
+TextStyle styleLight = new TextStyle(
+  fontWeight: FontWeight.w200,
+  fontSize: 15,
+  color: Renkler.dark,
+);
