@@ -2,6 +2,8 @@
 import 'dart:html';
 import 'dart:async';
 import 'dart:convert';
+import 'package:flutter_icons/flutter_icons.dart';
+
 import '../utilities/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -51,17 +53,17 @@ Widget repoCard(context, name, star, description, url) {
     decoration: new BoxDecoration(
       borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
       gradient: new LinearGradient(
-        colors: [Renkler.green, Renkler.darkD],
+        colors: [Renkler.greenL, Renkler.darkL],
         begin: Alignment.centerLeft,
         end: Alignment.centerRight,
         tileMode: TileMode.clamp,
       ),
       boxShadow: [
         BoxShadow(
-          color: Colors.grey.withOpacity(0.3),
-          spreadRadius: 3,
-          blurRadius: 2,
-          offset: Offset(0, 2), // changes position of shadow
+          color: Colors.grey.withOpacity(0.8),
+          spreadRadius: 1,
+          blurRadius: 1,
+          offset: Offset(0, 3),
         ),
       ],
     ),
@@ -75,8 +77,8 @@ Widget repoCard(context, name, star, description, url) {
             child: GestureDetector(
               onTap: () => window.open(url, 'Link'),
               child: Icon(
-                Icons.link,
-                color: Renkler.beyaz,
+                FontAwesome.link,
+                color: Renkler.beyaz70,
               ),
             ),
           ),
@@ -89,7 +91,7 @@ Widget repoCard(context, name, star, description, url) {
                 "$name",
                 style: new TextStyle(
                     fontSize: 20.0,
-                    color: Colors.white70,
+                    color: Renkler.beyaz70,
                     fontWeight: FontWeight.bold),
               ),
               new SizedBox(
@@ -97,7 +99,7 @@ Widget repoCard(context, name, star, description, url) {
               ),
               new Text(
                 "$description",
-                style: new TextStyle(fontSize: 12.0, color: Colors.white70),
+                style: new TextStyle(fontSize: 12.0, color: Renkler.beyaz70),
               ),
             ],
           )),
@@ -108,11 +110,13 @@ Widget repoCard(context, name, star, description, url) {
                 children: <Widget>[
                   new Text(
                     '$star',
-                    style: new TextStyle(fontSize: 30.0, color: Colors.white70),
+                    style:
+                        new TextStyle(fontSize: 30.0, color: Renkler.beyaz70),
                   ),
                   new Text(
                     'Stars',
-                    style: new TextStyle(fontSize: 14.0, color: Colors.white70),
+                    style:
+                        new TextStyle(fontSize: 14.0, color: Renkler.beyaz70),
                   ),
                 ],
               ))
