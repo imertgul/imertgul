@@ -1,3 +1,4 @@
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
 import 'dart:async';
 import 'dart:convert';
@@ -6,31 +7,29 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 Widget buildRepos() {
-  return Expanded(
-    child: FutureBuilder(
-      builder: (context, projectSnap) {
-        if (projectSnap.connectionState == ConnectionState.none &&
-            projectSnap.hasData == false) {
-          return Container();
-        } else if (projectSnap.data == null) {
-          return Container(
-            child: Text("Veri bekleniyor..."),
-          );
-        }
-        return ListView.builder(
-          reverse: true,
-          itemCount: projectSnap.data.length,
-          itemBuilder: (context, index) {
-            var repos = projectSnap.data.asMap();
-            var repo = repos[index];
-            var repoName = repo['name'];
-            return repoCard(context, repoName, repo['stargazers_count'],
-                repo['description'], repo['html_url']);
-          },
+  return FutureBuilder(
+    builder: (context, projectSnap) {
+      if (projectSnap.connectionState == ConnectionState.none &&
+          projectSnap.hasData == false) {
+        return Container();
+      } else if (projectSnap.data == null) {
+        return Container(
+          child: Text("Veri bekleniyor..."),
         );
-      },
-      future: fetchApi(),
-    ),
+      }
+      return ListView.builder(
+        reverse: true,
+        itemCount: projectSnap.data.length,
+        itemBuilder: (context, index) {
+          var repos = projectSnap.data.asMap();
+          var repo = repos[index];
+          var repoName = repo['name'];
+          return repoCard(context, repoName, repo['stargazers_count'],
+              repo['description'], repo['html_url']);
+        },
+      );
+    },
+    future: fetchApi(),
   );
 }
 

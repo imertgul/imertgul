@@ -1,3 +1,4 @@
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter/material.dart';
@@ -23,23 +24,21 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Expanded(
-            child: ListView(
-              children: <Widget>[
-                _buildProfile(),
-                _buildExperience(),
-                _buildRepo(),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 20.0),
-                    child: Text(
-                      "Made with Flutter by İbrahim Mert Gül",
-                      style: styleLight,
-                    ),
+          ListView(
+            children: <Widget>[
+              _buildProfile(),
+              _buildExperience(),
+              _buildRepo(),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: Text(
+                    "Made with Flutter by İbrahim Mert Gül",
+                    style: styleLight,
                   ),
-                )
-              ],
-            ),
+                ),
+              )
+            ],
           ),
         ],
       ),
@@ -99,13 +98,11 @@ Widget _buildProfile() {
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      "Computer Engineer, Flutter Developer",
-                      style: styleLight,
-                    ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    "Computer Engineer, Flutter Developer",
+                    style: styleLight,
                   ),
                 ),
               ],
@@ -162,14 +159,9 @@ Widget _buildExperience() {
                   "Experiences",
                   style: styleBaslik,
                 ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      "Detailed information about my experiences",
-                      style: styleLight,
-                    ),
-                  ),
+                Text(
+                  "Detailed information about my experiences",
+                  style: styleLight,
                 ),
               ],
             ),
@@ -211,14 +203,9 @@ Widget _buildRepo() {
                   "Repositories",
                   style: styleBaslik,
                 ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      "Detailed information about open source projects",
-                      style: styleLight,
-                    ),
-                  ),
+                Text(
+                  "Detailed information about open source projects",
+                  style: styleLight,
                 ),
               ],
             ),
