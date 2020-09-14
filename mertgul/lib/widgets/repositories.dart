@@ -52,10 +52,11 @@ Widget repoCard(context, name, star, description, url) {
     decoration: new BoxDecoration(
       borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
       gradient: new LinearGradient(
-          colors: [Renkler.green, Renkler.darkD],
-          begin: Alignment.centerLeft,
-          end: Alignment.centerRight,
-          tileMode: TileMode.clamp),
+        colors: [Renkler.green, Renkler.darkD],
+        begin: Alignment.centerLeft,
+        end: Alignment.centerRight,
+        tileMode: TileMode.clamp,
+      ),
       boxShadow: [
         BoxShadow(
           color: Colors.grey.withOpacity(0.3),
