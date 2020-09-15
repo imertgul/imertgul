@@ -30,6 +30,12 @@ TextStyle styleBaslik = new TextStyle(
   fontSize: 30,
   color: Renkler.dark,
 );
+TextStyle styleAltBaslik = new TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 15,
+  color: Renkler.dark,
+);
+
 TextStyle styleLight = new TextStyle(
   fontWeight: FontWeight.w200,
   fontSize: 15,
