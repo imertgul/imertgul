@@ -27,8 +27,9 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               buildProfile(),
               buildContact(),
-              // buildExperience(),
-              // buildEducation(),
+              buildEducation(),
+              buildExperience(),
+              buildProjects(),
               buildRepo(),
               buildFooter(),
             ],
