@@ -10,20 +10,53 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double screenWidth = 0;
-  double unit = 0;
+  var screenWidth;
+  var unit;
 
   @override
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
     unit = screenWidth / 100;
-    return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          Container(
-            color: Renkler.beyaz,
-          ),
-          ListView(
+    if (screenWidth > 500) {
+      return _desktop(unit);
+    }
+    return _mobile();
+  }
+}
+
+Widget _mobile() {
+  return Scaffold(
+    body: Stack(
+      children: <Widget>[
+        Container(
+          color: Renkler.beyaz,
+        ),
+        ListView(
+          children: <Widget>[
+            buildProfile(),
+            buildContact(),
+            buildEducation(),
+            buildExperience(),
+            buildProjects(),
+            buildRepo(),
+            buildFooter(),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+
+Widget _desktop(unit) {
+  return Scaffold(
+    body: Stack(
+      children: <Widget>[
+        Container(
+          color: Renkler.beyaz,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 100.0),
+          child: ListView(
             children: <Widget>[
               buildProfile(),
               buildContact(),
@@ -34,8 +67,8 @@ class _HomePageState extends State<HomePage> {
               buildFooter(),
             ],
           ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
 }
