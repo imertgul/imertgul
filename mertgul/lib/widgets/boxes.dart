@@ -107,6 +107,26 @@ Widget buildExperience() {
   );
 }
 
+Widget buildEducation() {
+  return Padding(
+    padding: const EdgeInsets.all(20.0),
+    child: Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Divider(thickness: 2),
+          Text(
+            "Education",
+            style: styleBaslik,
+          ),
+          Divider(thickness: 2),
+        ],
+      ),
+    ),
+  );
+}
+
 Widget buildRepo() {
   return Padding(
     padding: const EdgeInsets.all(20.0),
@@ -123,46 +143,6 @@ Widget buildRepo() {
           Divider(thickness: 2),
           Container(height: 500, child: buildRepos())
         ],
-      ),
-    ),
-  );
-}
-
-Widget buildReposs() {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
-    child: Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: Renkler.beyaz,
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 5,
-            blurRadius: 7,
-            offset: Offset(0, 3),
-          ),
-        ],
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              "Repositories",
-              style: styleBaslik,
-            ),
-            Text(
-              "Detailed information about open source projects",
-              style: styleLight,
-            ),
-            Divider(),
-            Container(height: 500, child: buildRepos())
-          ],
-        ),
       ),
     ),
   );

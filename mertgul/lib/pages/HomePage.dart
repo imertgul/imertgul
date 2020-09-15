@@ -22,18 +22,13 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Container(
             color: Renkler.beyaz,
-            // decoration: BoxDecoration(
-            //   image: DecorationImage(
-            //     image: AssetImage("images/background.png"),
-            //     fit: BoxFit.cover,
-            //   ),
-            // ),
           ),
           ListView(
             children: <Widget>[
               buildProfile(),
               buildContact(),
-              buildExperience(),
+              // buildExperience(),
+              // buildEducation(),
               buildRepo(),
               buildFooter(),
             ],
