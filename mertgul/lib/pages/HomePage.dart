@@ -1,9 +1,7 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:mertgul/utilities/constant.dart';
-import '../widgets/repositories.dart';
 import '../widgets/boxes.dart';
 
 class HomePage extends StatefulWidget {
