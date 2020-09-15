@@ -15,7 +15,7 @@ class Renkler {
   static Color red = myColors.palette[7];
   static Color redD = myColors.palette[8];
   static Color primary = myColors.palette[9];
-  static Color beyaz = Color(0xfffdfffc);
+  static Color beyaz = Color(0xffffffff);
   static Color beyaz10 = Colors.white10;
   static Color beyaz24 = Colors.white24;
   static Color beyaz54 = Colors.white54;
