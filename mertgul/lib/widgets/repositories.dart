@@ -2,8 +2,6 @@
 import 'dart:html';
 import 'dart:async';
 import 'dart:convert';
-import 'package:flutter_icons/flutter_icons.dart';
-
 import '../utilities/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -100,7 +98,7 @@ Widget repoCard(context, name, star, description, url) {
             ],
           ),
         ),
-        Divider()
+        Divider(thickness: 1)
       ],
     ),
   );

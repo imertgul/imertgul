@@ -101,9 +101,6 @@ Widget buildExperience() {
             style: styleBaslik,
           ),
           Divider(thickness: 2),
-
-          // _buildContactRow(AntDesign.phone, "Phone Number"),
-          // Divider(thickness: 2),
         ],
       ),
     ),
@@ -111,6 +108,27 @@ Widget buildExperience() {
 }
 
 Widget buildRepo() {
+  return Padding(
+    padding: const EdgeInsets.all(20.0),
+    child: Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Divider(thickness: 2),
+          Text(
+            "Repositories",
+            style: styleBaslik,
+          ),
+          Divider(thickness: 2),
+          Container(height: 500, child: buildRepos())
+        ],
+      ),
+    ),
+  );
+}
+
+Widget buildReposs() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
     child: Container(
