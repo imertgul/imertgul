@@ -48,80 +48,60 @@ Future<List> fetchApi() async {
 
 Widget repoCard(context, name, star, description, url) {
   return new Container(
-    // height: unit * 10,
     margin: new EdgeInsets.all(5.0),
-    decoration: new BoxDecoration(
-      borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
-      gradient: new LinearGradient(
-        colors: [Renkler.greenL, Renkler.darkL],
-        begin: Alignment.centerLeft,
-        end: Alignment.centerRight,
-        tileMode: TileMode.clamp,
-      ),
-      boxShadow: [
-        BoxShadow(
-          color: Colors.grey.withOpacity(0.8),
-          spreadRadius: 1,
-          blurRadius: 1,
-          offset: Offset(0, 3),
-        ),
-      ],
-    ),
-    child: Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: new Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          new Padding(
-            padding: new EdgeInsets.only(left: 10.0, right: 10.0),
-            child: GestureDetector(
-              onTap: () => window.open(url, 'Link'),
-              child: Icon(
-                FontAwesome.link,
-                color: Renkler.beyaz70,
-              ),
-            ),
-          ),
-          new Expanded(
-              child: new Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+    child: Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: new Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              new Text(
-                "$name",
-                style: new TextStyle(
-                    fontSize: 20.0,
-                    color: Renkler.beyaz70,
-                    fontWeight: FontWeight.bold),
-              ),
-              new SizedBox(
-                height: 8.0,
-              ),
-              new Text(
-                "$description",
-                style: new TextStyle(fontSize: 12.0, color: Renkler.beyaz70),
-              ),
-            ],
-          )),
-          new Padding(
-              padding: new EdgeInsets.only(left: 10.0, right: 10.0),
-              child: new Column(
+              new Expanded(
+                  child: new Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  new Text(
-                    '$star',
-                    style:
-                        new TextStyle(fontSize: 30.0, color: Renkler.beyaz70),
+                  GestureDetector(
+                    onTap: () => window.open(url, 'Link'),
+                    child: Text(
+                      "$name",
+                      style: new TextStyle(
+                          fontSize: 20.0,
+                          color: Renkler.blueL,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  new SizedBox(
+                    height: 8.0,
                   ),
                   new Text(
-                    'Stars',
-                    style:
-                        new TextStyle(fontSize: 14.0, color: Renkler.beyaz70),
+                    "$description",
+                    style: new TextStyle(fontSize: 12.0, color: Renkler.darkL),
                   ),
                 ],
-              ))
-        ],
-      ),
+              )),
+              new Padding(
+                  padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                  child: new Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      new Text(
+                        '$star',
+                        style:
+                            new TextStyle(fontSize: 30.0, color: Renkler.darkL),
+                      ),
+                      new Text(
+                        'Stars',
+                        style:
+                            new TextStyle(fontSize: 14.0, color: Renkler.darkL),
+                      ),
+                    ],
+                  ))
+            ],
+          ),
+        ),
+        Divider()
+      ],
     ),
   );
 }

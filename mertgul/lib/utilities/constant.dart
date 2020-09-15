@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:coolors_palette/coolors_palette.dart';
 
 final myColors = CoolorsPalette(
-    "https://coolors.co/055f3d-066943-07744a-313131-383c3f-34454d-d2433b-b13126-97190b-d10a10");
+    "https://coolors.co/0355b1-035dc3-0366d6-313131-383c3f-34454d-d2433b-b13126-97190b-f57567");
 
 class Renkler {
-  static Color greenD = myColors.palette[0];
-  static Color green = myColors.palette[1];
-  static Color greenL = myColors.palette[2];
+  static Color blueD = myColors.palette[0];
+  static Color blue = myColors.palette[1];
+  static Color blueL = myColors.palette[2];
   static Color darkD = myColors.palette[3];
   static Color dark = myColors.palette[4];
   static Color darkL = myColors.palette[5];
