@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
       title: 'İbrahim Mert Gül',
       debugShowCheckedModeBanner: true,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          fontFamily: 'RobotoCondensed'),
       home: HomePage(),
     );
   }
