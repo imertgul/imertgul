@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
     unit = screenWidth / 100;
-    if (screenWidth > 700) {
+    if (screenWidth > 900) {
       return _desktop(unit);
     }
     return _mobile();
@@ -55,7 +55,7 @@ Widget _desktop(unit) {
           color: Renkler.beyaz,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100.0),
+          padding: EdgeInsets.symmetric(horizontal: unit * 25),
           child: ListView(
             children: <Widget>[
               buildProfile(),
