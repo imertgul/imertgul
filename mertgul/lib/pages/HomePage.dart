@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
     unit = screenWidth / 100;
-    if (screenWidth > 500) {
+    if (screenWidth > 700) {
       return _desktop(unit);
     }
     return _mobile();
