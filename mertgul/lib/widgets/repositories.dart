@@ -6,7 +6,7 @@ import '../utilities/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-Widget buildRepos() {
+Widget buildRepos(username) {
   return FutureBuilder(
     builder: (context, projectSnap) {
       if (projectSnap.connectionState == ConnectionState.none &&
@@ -29,13 +29,13 @@ Widget buildRepos() {
         },
       );
     },
-    future: fetchApi(),
+    future: fetchApi(username),
   );
 }
 
-Future<List> fetchApi() async {
+Future<List> fetchApi(username) async {
   final response =
-      await http.get('https://api.github.com/users/imertgul/repos');
+      await http.get('https://api.github.com/users/$username/repos');
   if (response.statusCode == 200) {
     final parsed = json.decode(response.body);
     return parsed;

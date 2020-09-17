@@ -237,7 +237,7 @@ Widget buildProjects() {
   );
 }
 
-Widget buildRepo() {
+Widget buildRepo(username) {
   return Padding(
     padding: const EdgeInsets.all(20.0),
     child: Container(
@@ -251,7 +251,7 @@ Widget buildRepo() {
             style: styleBaslik,
           ),
           Divider(thickness: 2),
-          Container(height: 500, child: buildRepos())
+          Container(height: 500, child: buildRepos(username))
         ],
       ),
     ),
