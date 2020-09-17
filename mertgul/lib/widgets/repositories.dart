@@ -74,7 +74,7 @@ Widget repoCard(context, name, star, description, url) {
                   ),
                   new Text(
                     "$description",
-                    style: new TextStyle(fontSize: 12.0, color: Renkler.darkL),
+                    style: new TextStyle(fontSize: 12.0, color: Renkler.dark),
                   ),
                 ],
               )),
@@ -86,12 +86,12 @@ Widget repoCard(context, name, star, description, url) {
                       new Text(
                         '$star',
                         style:
-                            new TextStyle(fontSize: 30.0, color: Renkler.darkL),
+                            new TextStyle(fontSize: 30.0, color: Renkler.dark),
                       ),
                       new Text(
                         'Stars',
                         style:
-                            new TextStyle(fontSize: 14.0, color: Renkler.darkL),
+                            new TextStyle(fontSize: 14.0, color: Renkler.dark),
                       ),
                     ],
                   ))

@@ -37,7 +37,7 @@ Widget buildProfile() {
                   padding: const EdgeInsets.all(8.0),
                   child: Icon(
                     AntDesign.github,
-                    color: Renkler.darkL,
+                    color: Renkler.dark,
                   ),
                 ),
               ),
@@ -48,7 +48,7 @@ Widget buildProfile() {
                   padding: const EdgeInsets.all(8.0),
                   child: Icon(
                     AntDesign.linkedin_square,
-                    color: Renkler.darkL,
+                    color: Renkler.dark,
                   ),
                 ),
               ),
@@ -278,7 +278,7 @@ Widget _buildContactRow(IconData icon, String text) {
         padding: const EdgeInsets.all(8.0),
         child: Icon(
           icon,
-          color: Renkler.darkL,
+          color: Renkler.dark,
         ),
       ),
       Container(height: 30, child: VerticalDivider(thickness: 2)),
