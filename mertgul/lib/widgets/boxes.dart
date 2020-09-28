@@ -132,6 +132,71 @@ Widget buildExperience() {
   );
 }
 
+Widget buildPublications() {
+  return Padding(
+    padding: const EdgeInsets.all(20.0),
+    child: Container(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Divider(thickness: 2),
+          Text(
+            "Publications ",
+            style: styleBaslik,
+          ),
+          Divider(thickness: 2),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _buildPublishBox(
+                    "color_line_picker",
+                    "2020",
+                    "This package helps you to create color palette as horizontal list. Able to detech which color picked and returns it.",
+                    "https://pub.dev/packages/color_line_picker"),
+                Divider(thickness: 2),
+                _buildPublishBox(
+                    "Flutter ile Web olur mu abi? Deneyelim…",
+                    "2020",
+                    "Sadece Flutter Web’e özgü detaylardan ve tecrübelerim.",
+                    "https://medium.com/@ibrahimmertgul/flutter-ile-web-olur-mu-abi-deneyelim-2dbbc212c4e4"),
+                Divider(thickness: 2),
+                _buildPublishBox(
+                    "coolors_palette",
+                    "2020",
+                    "Flutter package that helps you to get your color palette from coolors.co to your project",
+                    "https://pub.dev/packages/coolors_palette"),
+                Divider(thickness: 2),
+                _buildPublishBox(
+                    "Kaderin şifresi: Pin kodunu hesapla",
+                    "2020",
+                    "Google Play'de yayınlanmış fal bakma uygulamasıdır.",
+                    "https://play.google.com/store/apps/details?id=com.pin_kodu"),
+                Divider(thickness: 2),
+                _buildPublishBox(
+                    "My Quarantine",
+                    "2020",
+                    "“My Quarantine” is a mobile application that keeps track of the quarantine, keep records of breach reports and scores / reports the quarantine according to these data.",
+                    "https://technologydevelopmentgroup.net/blog/analytics/my-quarantine/ibrahim-mert-gul/"),
+                Divider(thickness: 2),
+                _buildPublishBox(
+                    "SynTxt — Electron ile Markdown editör",
+                    "2019",
+                    "Gerçek zamanlı ortak çalışma destekli markdown editör.",
+                    "https://medium.com/syntxt-electron-ile-markdown-edit%C3%B6r"),
+              ],
+            ),
+          ),
+          Divider(thickness: 2),
+        ],
+      ),
+    ),
+  );
+}
+
 Widget buildEducation() {
   return Padding(
     padding: const EdgeInsets.all(20.0),
@@ -306,6 +371,41 @@ Widget _buildDetailedBox(String title, String date, String description) {
           Text(
             title,
             style: styleAltBaslik,
+          ),
+          Text(
+            date,
+            style: styleLight,
+          ),
+        ],
+      ),
+      SizedBox(height: 5),
+      Text(
+        description,
+        style: styleLight,
+      ),
+    ],
+  );
+}
+
+Widget _buildPublishBox(
+    String title, String date, String description, String url) {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          GestureDetector(
+            onTap: () => window.open(url, 'Link'),
+            child: Text(
+              "$title",
+              style: TextStyle(
+                  fontSize: 20.0,
+                  color: Renkler.blueL,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
           Text(
             date,
