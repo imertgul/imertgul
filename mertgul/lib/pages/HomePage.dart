@@ -1,5 +1,4 @@
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:mertgul/utilities/constant.dart';
 import '../widgets/boxes.dart';
@@ -39,7 +38,7 @@ Widget _mobile() {
             buildEducation(),
             buildPublications(),
             buildProjects(),
-            buildRepo(),
+            buildRepo('imertgul'),
             buildFooter(),
           ],
         ),
@@ -65,7 +64,7 @@ Widget _desktop(unit) {
               buildEducation(),
               buildPublications(),
               buildProjects(),
-              buildRepo(),
+              buildRepo('imertgul'),
               buildFooter(),
             ],
           ),
