@@ -45,17 +45,17 @@ Future<List> fetchApi(username) async {
 }
 
 Widget repoCard(context, name, star, description, url) {
-  return new Container(
-    margin: new EdgeInsets.all(5.0),
+  return Container(
+    margin: EdgeInsets.all(5.0),
     child: Column(
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: new Row(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              new Expanded(
-                  child: new Column(
+              Expanded(
+                  child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -63,35 +63,33 @@ Widget repoCard(context, name, star, description, url) {
                     onTap: () => window.open(url, 'Link'),
                     child: Text(
                       "$name",
-                      style: new TextStyle(
+                      style: TextStyle(
                           fontSize: 20.0,
                           color: Renkler.blueL,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  new SizedBox(
+                  SizedBox(
                     height: 8.0,
                   ),
-                  new Text(
+                  Text(
                     "$description",
-                    style: new TextStyle(fontSize: 12.0, color: Renkler.darkL),
+                    style: TextStyle(fontSize: 12.0, color: Renkler.darkL),
                   ),
                 ],
               )),
-              new Padding(
-                  padding: new EdgeInsets.only(left: 10.0, right: 10.0),
-                  child: new Column(
+              Padding(
+                  padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      new Text(
+                      Text(
                         '$star',
-                        style:
-                            new TextStyle(fontSize: 30.0, color: Renkler.darkL),
+                        style: TextStyle(fontSize: 30.0, color: Renkler.darkL),
                       ),
-                      new Text(
+                      Text(
                         'Stars',
-                        style:
-                            new TextStyle(fontSize: 14.0, color: Renkler.darkL),
+                        style: TextStyle(fontSize: 14.0, color: Renkler.darkL),
                       ),
                     ],
                   ))
