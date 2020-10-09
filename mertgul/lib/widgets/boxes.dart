@@ -154,6 +154,12 @@ Widget buildPublications() {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _buildPublishBox(
+                    "Plank Counter",
+                    "2020",
+                    "Plank exercise time counter and logger made with Flutter ",
+                    "https://play.google.com/store/apps/details?id=com.plank_counter"),
+                Divider(thickness: 2),
+                _buildPublishBox(
                     "color_line_picker",
                     "2020",
                     "This package helps you to create color palette as horizontal list. Able to detech which color picked and returns it.",
