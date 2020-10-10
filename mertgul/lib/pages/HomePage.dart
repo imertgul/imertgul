@@ -34,8 +34,8 @@ Widget _mobile() {
           children: <Widget>[
             buildProfile(),
             buildContact(),
-            buildExperience(),
-            buildEducation(),
+            // buildExperience(),
+            // buildEducation(),
             buildProjects(),
             buildPublications(),
             buildRepo('imertgul'),
@@ -60,8 +60,8 @@ Widget _desktop(unit) {
             children: <Widget>[
               buildProfile(),
               buildContact(),
-              buildExperience(),
-              buildEducation(),
+              // buildExperience(),
+              // buildEducation(),
               buildProjects(),
               buildPublications(),
               buildRepo('imertgul'),
