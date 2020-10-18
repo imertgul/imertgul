@@ -263,6 +263,9 @@ Widget buildProjects() {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                _buildDetailedBox("Remote Media/Content Player", "2020",
+                    "Remote Media/Content Player that can be controlled over the network. Electron app displays the media. You can communicate with API as shown below or use Test UI that will be run automatically. Github available."),
+                Divider(thickness: 2),
                 _buildDetailedBox(
                     "My Quarantine, TDG Coder in Action Award Winner",
                     "2020",

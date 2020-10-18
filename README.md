@@ -2,7 +2,7 @@
 
 > Graduated from Computer Engineering. Worked on
 > 3D Printing, Robotics, Web and hybrid mobile technologies. For now
-> mostly working on Flutter.
+> mostly working on Flutter and Node.js.
 
 <!--
 **imertgul/imertgul** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
