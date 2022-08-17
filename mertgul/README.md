@@ -1,3 +1,0 @@
-# mertgul
-
-My personal website
